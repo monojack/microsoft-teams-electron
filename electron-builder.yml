@@ -1,0 +1,4 @@
+appId: me.ionutachim.${name}
+productName: "Microsoft Teams"
+linux:
+  icon: assets/icons/png

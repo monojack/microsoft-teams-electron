@@ -1,0 +1,26 @@
+{
+  "name": "microsoft-teams-electron",
+  "version": "1.0.0",
+  "description": "Microsoft Teams - Electron App",
+  "main": "main.js",
+  "repository": "https://github.com/monojack/microsoft-teams-electron.git",
+  "author": "Ionut Achim <monodnb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-builder": "^19.19.1",
+    "electron-packager": "^8.7.2",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/teams.png --prune=true --out=dist",
+    "build": "electron-builder --linux deb tar.xz"
+  }
+}
