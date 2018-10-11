@@ -1,5 +1,6 @@
 const { app, shell, BrowserWindow, Menu, } = require('electron')
 const path = require('path')
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134'
 
 const config = {
   useContentSize: true,
@@ -29,10 +30,7 @@ app.on('ready', function () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(require('./src/menu')))
 
   let win = new BrowserWindow(config)
-  win.loadURL('https://teams.microsoft.com', {
-    userAgent:
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
-  })
+  win.loadURL("https://teams.microsoft.com", { userAgent: USER_AGENT })
   win.on('closed', function () {
     win = null
   })
